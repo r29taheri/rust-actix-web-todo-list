@@ -1,0 +1,40 @@
+@baseUrl = http://localhost:8080
+
+# @name GetTasks
+GET {{baseUrl}}/tasks
+
+###
+
+# @name PostTask
+POST {{baseUrl}}/task
+Content-Type: application/json
+
+{
+    "title": "test",
+    "description": "task description",
+    "status": "todo"
+}
+
+###
+
+# @name GetTask
+GET {{baseUrl}}/task/631b790e1c98024510a35642
+
+###
+
+# @name UpdateTask
+PUT  {{baseUrl}}/task/631b790e1c98024510a35642
+Content-Type: application/json
+
+{
+    "title": "test",
+    "description": "task description",
+    "status": "in_progress"
+}
+
+###
+
+# @name DeleteTask
+DELETE  {{baseUrl}}/task/631a5b8d947b1ef99698d57b
+
+###
